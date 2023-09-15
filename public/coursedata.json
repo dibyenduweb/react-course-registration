@@ -2,24 +2,24 @@
   {
     "id": "1",
     "img": "https://i.ibb.co/s9mL0mQ/Rectangle-2-2.png",
-    "title": "Introduction to C Programming",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title": "Intro to C Programming",
+    "paragraph": "Learn the basics of C programming for beginners.",
     "price": 15000,
     "credit": 1
   },
   {
     "id": "2",
     "img": "https://i.ibb.co/tH1md1p/Rectangle-2-3.png",
-    "title": "Introduction to Algorithms",
-    "paragraph": "Nulla facilisi. Sed sit amet ligula in quam tincidunt feugiat.",
+    "title": "Intro to Algorithms",
+    "paragraph": "Explore the fundamentals of algorithms and problem-solving.",
     "price": 25000,
     "credit": 2
   },
   {
     "id": "3",
     "img": "https://i.ibb.co/9sbSDQX/Rectangle-2-4.png",
-    "title": "Introduction to C++ for DSA",
-    "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "title": "Intro to C++ for DSA",
+    "paragraph": "Master C++ programming for Data Structures and Algorithms.",
     "price": 10000,
     "credit": 10
   },
@@ -27,15 +27,15 @@
     "id": "4",
     "img": "https://i.ibb.co/gjv3VCB/Rectangle-3.png",
     "title": "Basic Data Structures",
-    "paragraph": "Fusce vulputate orci ut arcu lacinia, eu tempus est sollicitudin.",
+    "paragraph": "Build a strong foundation in fundamental data structures.",
     "price": 35000,
     "credit": 5
   },
   {
     "id": "5",
     "img": "https://i.ibb.co/qW66Dm9/Rectangle-2.png",
-    "title": "Introduction to OOP Python",
-    "paragraph": "Duis sit amet velit a tellus dapibus dictum vel et nunc.",
+    "title": "Intro to OOP Python",
+    "paragraph": "Explore Python's Object-Oriented Programming concepts.",
     "price": 19000,
     "credit": 5
   },
@@ -43,7 +43,7 @@
     "id": "6",
     "img": "https://i.ibb.co/sKzgBJx/Rectangle-2-5.png",
     "title": "Software Engineering",
-    "paragraph": "Vestibulum sit amet sem nec velit maximus viverra non at elit.",
+    "paragraph": "Learn the essentials of software engineering principles.",
     "price": 23000,
     "credit": 2
   },
@@ -51,7 +51,7 @@
     "id": "7",
     "img": "https://i.ibb.co/1bVNPL8/Rectangle-3-1.png",
     "title": "AWS, Cloud Computing",
-    "paragraph": "Integer eget sapien eu dolor viverra commodo at et nulla.",
+    "paragraph": "Dive into AWS and cloud computing concepts and services.",
     "price": 35000,
     "credit": 5
   },
@@ -59,7 +59,7 @@
     "id": "8",
     "img": "https://i.ibb.co/k5QfQm2/Rectangle-2-1.png",
     "title": "Database (MySQL)",
-    "paragraph": "Suspendisse potenti. Nunc ac lorem eu urna tristique tincidunt.",
+    "paragraph": "Explore the basics of MySQL database management.",
     "price": 19000,
     "credit": 5
   },
@@ -67,7 +67,7 @@
     "id": "9",
     "img": "https://i.ibb.co/n76mX10/Rectangle-2-6.png",
     "title": "Problem-Solving Part",
-    "paragraph": "Suspendisse potenti. Nunc ac lorem eu urna tristique tincidunt.",
+    "paragraph": "Develop effective problem-solving skills for various challenges.",
     "price": 23000,
     "credit": 2
   }

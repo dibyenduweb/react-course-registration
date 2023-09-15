@@ -25,7 +25,7 @@ const[totalPrice, setTotalPrice] =useState(0);
     let addPrice = course.price;
 
    if(isSelected){
-    alert('You have already added in course');
+    alert('This item allrady added');
    }else{
         selectCourse.forEach((item) => {
           count =count + item.credit;
@@ -33,7 +33,7 @@ const[totalPrice, setTotalPrice] =useState(0);
         });
         const totalRemaining =20 - count;
         if(totalRemaining  <0){
-          alert('baag bokachoda taka nai aar')
+          alert('You dont have enough credit')
         }else{
           setTotalPrice(addPrice);
         setTotalHour(count);
@@ -50,8 +50,8 @@ const[totalPrice, setTotalPrice] =useState(0);
 
 //console.log(allCourse);
     return (
-<div className='flex'>
-<div className='grid grid-cols-3 gap-4 ml-14 p-4'>
+<div className='lg:flex'>
+<div className='grid lg:grid-cols-3 gap-4 lg:ml-14 p-4'>
     {/* This card style */}
     
           {
@@ -59,14 +59,14 @@ const[totalPrice, setTotalPrice] =useState(0);
                 <div className='rounded-md w-[280px]  bg-white mt-14 ml-14 '>
            <img src={course.img} alt="" />
            <h2 className='text-lg font-semibold text-center'>{course.title}</h2>
-           <p className='ml-4'>{course.paragraph}</p>
+           <p className='ml-4 text-[16px] text-zinc-600'>{course.paragraph}</p>
             <div className='flex ml-4 gap-4 mt-4'>
             <i className='mt-1'><FiDollarSign></FiDollarSign></i>
             <p> Price:{course.price} </p>
             <i className='mt-1'><BsBook></BsBook></i>
             <p>Credit:{course.credit}hr</p>
             </div>
-           <button onClick={()=>handleSelectCourse(course)} className='text-white rounded-md text-center bg-gradient-to-r from-sky-400 to-blue-500 w-[280px] h-[40px] mt-6 '>Select</button>
+           <button onClick={()=>handleSelectCourse(course)} className='text-white rounded-md text-center bg-sky-500 hover:bg-sky-700 w-[280px] h-[35px] mt-6 '>Select</button>
 </div>
             ))
           }
@@ -78,3 +78,4 @@ const[totalPrice, setTotalPrice] =useState(0);
 };
 
 export default Home;
+

@@ -1,9 +1,9 @@
 ## Know About this Project
--Add at least 3 Project features
-   1.Course Enrollment and Credit managemnet system.
-   2.User Frindly course catalog.
-   3.User alert notification.
-   4.Fast Response and Mobile-Friendly.
+- Add at least 3 Project features
+   1. Course Enrollment and Credit managemnet system.
+   2. User Frindly course catalog.
+   3. User alert notification.
+   4. Fast Response and Mobile-Friendly.cl
 
 
 - Discuss how you managed the state in your assignment project.

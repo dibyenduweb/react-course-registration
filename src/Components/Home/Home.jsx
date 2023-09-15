@@ -4,6 +4,10 @@ import React, { useEffect, useState } from 'react';
 import { FiDollarSign } from "react-icons/fi";
 import { BsBook } from "react-icons/bs";
 import Buy from '../Buy/Buy';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Home = () => {
 const[allCourse, setAllCourse] = useState([]);
 const[selectCourse, setSelectCourse] = useState([]);
@@ -25,7 +29,7 @@ const[totalPrice, setTotalPrice] =useState(0);
     let addPrice = course.price;
 
    if(isSelected){
-    alert('This item allrady added');
+    return toast('⚠️This item allready added');
    }else{
         selectCourse.forEach((item) => {
           count =count + item.credit;
@@ -33,7 +37,7 @@ const[totalPrice, setTotalPrice] =useState(0);
         });
         const totalRemaining =20 - count;
         if(totalRemaining  <0){
-          alert('You dont have enough credit')
+          return toast('❌You dont have enough credit');
         }else{
           setTotalPrice(addPrice);
         setTotalHour(count);
@@ -51,7 +55,7 @@ const[totalPrice, setTotalPrice] =useState(0);
 //console.log(allCourse);
     return (
 <div className='lg:flex'>
-<div className='grid lg:grid-cols-3 gap-4 lg:ml-14 p-4'>
+<div className='lg:grid lg:grid-cols-3 gap-4 lg:ml-14 p-4'>
     {/* This card style */}
     
           {
@@ -72,6 +76,7 @@ const[totalPrice, setTotalPrice] =useState(0);
           }
           </div>
           <Buy selectCourse={selectCourse} remaining = {remaining} totalHour={totalHour} totalPrice={totalPrice}></Buy>
+          <ToastContainer />
 </div>
 
     );

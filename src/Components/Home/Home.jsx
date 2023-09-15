@@ -7,6 +7,11 @@ import Buy from '../Buy/Buy';
 const Home = () => {
 const[allCourse, setAllCourse] = useState([]);
 const[selectCourse, setSelectCourse] = useState([]);
+const[remaining, setRemaining] =useState(20);
+const[totalHour, setTotalHour] = useState(0);
+const[totalPrice, setTotalPrice] =useState(0);
+
+
 
     useEffect(() => {
             fetch("./coursedata.json")
@@ -16,12 +21,29 @@ const[selectCourse, setSelectCourse] = useState([]);
 
   const handleSelectCourse = (course) => {
     const isSelected = selectCourse.find((item) => item.id ==course.id);
+    let count = course.credit;
+    let addPrice = course.price;
+
    if(isSelected){
     alert('You have already added in course');
    }else{
-    setSelectCourse([...selectCourse, course]);
-   }
+        selectCourse.forEach((item) => {
+          count =count + item.credit;
+          addPrice = addPrice + item.price;
+        });
+        const totalRemaining =20 - count;
+        if(totalRemaining  <0){
+          alert('baag bokachoda taka nai aar')
+        }else{
+          setTotalPrice(addPrice);
+        setTotalHour(count);
+        setRemaining(totalRemaining);
+        setSelectCourse([...selectCourse, course]);
+        }
+
         
+   }
+
   };
 
 
@@ -29,7 +51,7 @@ const[selectCourse, setSelectCourse] = useState([]);
 //console.log(allCourse);
     return (
 <div className='flex'>
-<div className='grid grid-cols-3 gap-4 ml-14'>
+<div className='grid grid-cols-3 gap-4 ml-14 p-4'>
     {/* This card style */}
     
           {
@@ -49,7 +71,7 @@ const[selectCourse, setSelectCourse] = useState([]);
             ))
           }
           </div>
-          <Buy selectCourse={selectCourse}></Buy>
+          <Buy selectCourse={selectCourse} remaining = {remaining} totalHour={totalHour} totalPrice={totalPrice}></Buy>
 </div>
 
     );
